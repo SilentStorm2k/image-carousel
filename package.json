@@ -1,8 +1,8 @@
 {
-    "name": "name",
+    "name": "image-carousel",
     "version": "1.0.0",
     "description": "<!-- Copyright notice for this README.md template -->",
-    "main": "index.js",
+    "main": "src/ts/image-carousel.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "check-format": "prettier --check .",
