@@ -1,4 +1,3 @@
-import { resolve } from '../../webpack.common';
 import '../css/image-carousel.styles.css';
 import defaultImage from '../assets/defaultImage.png';
 
@@ -58,7 +57,6 @@ export function imageCarousel() {
     }
 
     function showImage(imgIdx: number) {
-        console.log(imgIdx);
         imageHolder.children[imgIdx].classList.remove('hide');
         imageButtonContainer.children[imgIdx].classList.add('focused-button');
     }

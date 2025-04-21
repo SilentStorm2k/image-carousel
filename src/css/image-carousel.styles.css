@@ -28,7 +28,6 @@
 .image-carousel > div {
     display: flex;
     gap: 1rem;
-    /* padding: auto; */
     padding: 0 1rem;
 }
 
@@ -50,6 +49,7 @@
     flex-wrap: wrap;
     gap: 5px;
     overflow: auto;
+    padding: 5px;
 }
 
 /* targets the image navigation buttons */
