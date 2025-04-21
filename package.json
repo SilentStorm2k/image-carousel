@@ -1,7 +1,7 @@
 {
-    "name": "image-carousel",
+    "name": "@silentstorm2k/image-carousel",
     "version": "1.0.0",
-    "description": "<!-- Copyright notice for this README.md template -->",
+    "description": "A simple Ts/js component for a image carousel built on TS",
     "main": "src/ts/image-carousel.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
@@ -12,7 +12,9 @@
         "push": "bash gh-pages-deploy.sh",
         "deploy": "npm run build && npm run push"
     },
-    "keywords": [],
+    "keywords": [
+        "typescript"
+    ],
     "author": "SilentStorm2k (https://github.com/SilentStorm2k)",
     "license": "MIT",
     "devDependencies": {
@@ -28,12 +30,12 @@
         "webpack-cli": "^5.1.4",
         "webpack-dev-server": "^5.1.0"
     },
-    "homepage": "https://github.com/SilentStorm2k/",
+    "homepage": "https://github.com/SilentStorm2k/image-carousel",
     "bugs": {
-        "url": "https://github.com/SilentStorm2k/"
+        "url": "https://github.com/SilentStorm2k/image-carousel/issues"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/SilentStorm2k/"
+        "url": "git+https://github.com/SilentStorm2k/image-carousel.git"
     }
 }
