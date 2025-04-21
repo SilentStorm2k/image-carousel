@@ -52,11 +52,15 @@ export function imageCarousel() {
 
     function hideImage(imgIdx: number) {
         imageHolder.children[imgIdx].classList.add('hide');
+        imageButtonContainer.children[imgIdx].classList.remove(
+            'focused-button',
+        );
     }
 
     function showImage(imgIdx: number) {
         console.log(imgIdx);
         imageHolder.children[imgIdx].classList.remove('hide');
+        imageButtonContainer.children[imgIdx].classList.add('focused-button');
     }
 
     function cleanElement(element: HTMLElement) {
@@ -83,13 +87,15 @@ export function imageCarousel() {
 
         nextButton.textContent = 'next';
         prevButton.textContent = 'prev';
+        nextButton.classList.add('btn');
+        prevButton.classList.add('btn');
 
         nextButton.addEventListener('click', nextImage);
         prevButton.addEventListener('click', prevImage);
 
-        controlHolder.appendChild(nextButton);
-        controlHolder.appendChild(imageButtonContainer);
         controlHolder.appendChild(prevButton);
+        controlHolder.appendChild(imageButtonContainer);
+        controlHolder.appendChild(nextButton);
 
         for (let i = 0; i < images.length; i++) createImageButton(i);
     }

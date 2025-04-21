@@ -14,6 +14,7 @@ carousel.addImage(t1);
 carousel.addImage(t2);
 carousel.addImage(t3);
 carousel.addImage(t4);
+carousel.addImage('some_invalid_path');
 
 const body = document.querySelector('body');
 body?.appendChild(carousel.getElement());

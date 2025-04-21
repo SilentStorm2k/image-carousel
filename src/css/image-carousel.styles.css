@@ -1,18 +1,18 @@
 .image-carousel {
     width: 450px;
     height: 350px;
-    border: 12px red solid;
+    border: #212121 solid 5px;
+    border-radius: 5%;
 }
 
 .image-carousel div:first-child {
-    height: 80%;
-    border: 2px solid green;
+    height: 70%;
+    padding-top: 1rem;
 }
 
 .image-carousel div {
     height: 20%;
     margin: 0 auto;
-    border: 2px solid orange;
 }
 
 .image-carousel img {
@@ -23,4 +23,84 @@
 
 .hide {
     display: none;
+}
+
+.image-carousel > div {
+    display: flex;
+    gap: 1rem;
+    /* padding: auto; */
+    padding: 0 1rem;
+}
+
+.image-carousel > div > * {
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+/* targets next and prev button */
+.image-carousel > div > button {
+    cursor: pointer;
+}
+
+/* targets image navigation holder */
+.image-carousel > div > div {
+    display: flex;
+    height: 80%;
+    flex-wrap: wrap;
+    gap: 5px;
+    overflow: auto;
+}
+
+/* targets the image navigation buttons */
+.image-button {
+    height: 10px;
+    width: 10px;
+    border-radius: 100%;
+    border: none;
+    cursor: pointer;
+    background-color: #e8e8e8;
+    transition: all 0.3s ease-in-out;
+}
+
+.image-button:hover,
+.focused-button {
+    background-color: #979797;
+    box-shadow: 0 0 0 2px #212121;
+}
+
+/* From Uiverse.io by alexroumi */
+.image-carousel > div > button {
+    border: unset;
+    border-radius: 15px;
+    color: #212121;
+    z-index: 1;
+    background: #e8e8e8;
+    position: relative;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    transition: all 250ms;
+}
+
+.image-carousel > div > button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 15px;
+    background-color: #212121;
+    z-index: -1;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    transition: all 250ms;
+}
+
+.image-carousel > div > button:hover {
+    color: #e8e8e8;
+}
+
+.image-carousel > div > button:hover::before {
+    width: 100%;
 }
