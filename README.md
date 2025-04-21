@@ -43,18 +43,18 @@ SOFTWARE. -->
 <br />
 <div align="center">
   <a href="https://github.com/silentstorm2k/image-carousel">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="src/assets/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-<h3 align="center">project_title</h3>
+<h3 align="center">Image Carousel</h3>
 
   <p align="center">
-    project_description
+    A simple image carousel element built in TS
     <br />
     <a href="https://github.com/silentstorm2k/image-carousel"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/silentstorm2k/image-carousel">View Demo</a>
+    <a href="https://silentstorm2k.github.io/image-carousel">View Demo</a>
     ·
     <a href="https://github.com/silentstorm2k/image-carousel/issues">Report Bug</a>
     ·
@@ -94,7 +94,7 @@ SOFTWARE. -->
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `silentstorm2k`, `image-carousel`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`
+A simple image carousel element built in TS
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -110,32 +110,19 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+Simple plug and play, install the package and use it according to the usage guide.
+
+```sh
+  npm i @silentstrom2k/image-carousel
+```
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
+You must have node installed, otherwise wth you doing here? Might as well update npm while you're at it.
 
 - npm
     ```sh
     npm install npm@latest -g
-    ```
-
-### Installation
-
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-    ```sh
-    git clone https://github.com/silentstorm2k/image-carousel.git
-    ```
-3. Install NPM packages
-    ```sh
-    npm install
-    ```
-4. Enter your API in `config.js`
-    ```js
-    const API_KEY = 'ENTER YOUR API';
     ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -144,9 +131,27 @@ This is an example of how to list things you need to use the software and how to
 
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+- Create your Image Carousel object by
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+    ```ts
+    const carousel = imageCarousel();
+    ```
+
+- You can images by:
+
+    ```ts
+    import valid_path from 'path/to/your_image.jpg';
+    carousel.addImage(valid_path);
+    ```
+
+- And you can generate the div element which you can insert into your webpage
+
+    ```ts
+    const carouselDiv = carousel.getElement(); // returns a div of the menubar
+
+    const body = document.querySelector('body');
+    body?.appendChild(carouselDiv);
+    ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -154,10 +159,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 ## Roadmap
 
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-    - [ ] Nested Feature
+[Ability to resize the image carousel]()
 
 See the [open issues](https://github.com/silentstorm2k/image-carousel/issues) for a full list of proposed features (and known issues).
 
@@ -192,7 +194,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
+Reach out by raising an issue
 
 Project Link: [https://github.com/silentstorm2k/image-carousel](https://github.com/silentstorm2k/image-carousel)
 
@@ -203,8 +205,7 @@ Project Link: [https://github.com/silentstorm2k/image-carousel](https://github.c
 ## Acknowledgments
 
 - [<a href='https://pngtree.com/freepng/no-image-vector-illustration-isolated_4979075.html'>png image from pngtree.com/</a>]()
-- []()
-- []()
+- [<a href="https://www.flaticon.com/free-icons/picture" title="picture icons">Picture icons created by Pixel perfect - Flaticon</a>]()
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -223,7 +224,7 @@ Project Link: [https://github.com/silentstorm2k/image-carousel](https://github.c
 [license-url]: https://github.com/silentstorm2k/image-carousel/blob/master/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/linkedin_username
-[product-screenshot]: images/screenshot.png
+[product-screenshot]: src/assets/screenshot.gif
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [Next-url]: https://nextjs.org/
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
