@@ -1,8 +1,8 @@
-"use strict";
+'use strict';
 exports.__esModule = true;
 exports.imageCarousel = void 0;
-require("../css/image-carousel.styles.css");
-var defaultImage_png_1 = require("../assets/defaultImage.png");
+require('../css/image-carousel.styles.css');
+var defaultImage_png_1 = require('../assets/defaultImage.png');
 function imageCarousel() {
     var focusedImage = 0;
     var element = createElement();
@@ -46,15 +46,16 @@ function imageCarousel() {
     }
     function hideImage(imgIdx) {
         imageHolder.children[imgIdx].classList.add('hide');
-        imageButtonContainer.children[imgIdx].classList.remove('focused-button');
+        imageButtonContainer.children[imgIdx].classList.remove(
+            'focused-button',
+        );
     }
     function showImage(imgIdx) {
         imageHolder.children[imgIdx].classList.remove('hide');
         imageButtonContainer.children[imgIdx].classList.add('focused-button');
     }
     function cleanElement(element) {
-        while (element.firstChild)
-            element.removeChild(element.firstChild);
+        while (element.firstChild) element.removeChild(element.firstChild);
     }
     function addImageToImageHolder(image) {
         var imgElement = createImageElement(image);
@@ -63,8 +64,10 @@ function imageCarousel() {
     }
     function createImageElement(image) {
         var imgElement = new Image();
-        imgElement.onload = function () { };
-        imgElement.onerror = function () { return (imgElement.src = defaultImage_png_1["default"]); };
+        imgElement.onload = function () {};
+        imgElement.onerror = function () {
+            return (imgElement.src = defaultImage_png_1['default']);
+        };
         imgElement.src = image;
         return imgElement;
     }
@@ -80,13 +83,14 @@ function imageCarousel() {
         controlHolder.appendChild(prevButton);
         controlHolder.appendChild(imageButtonContainer);
         controlHolder.appendChild(nextButton);
-        for (var i = 0; i < images.length; i++)
-            createImageButton(i);
+        for (var i = 0; i < images.length; i++) createImageButton(i);
     }
     function createImageButton(imageIdx) {
         var imgButton = document.createElement('button');
         imgButton.classList.add('image-button');
-        imgButton.addEventListener('click', function () { return navToImage(imageIdx); });
+        imgButton.addEventListener('click', function () {
+            return navToImage(imageIdx);
+        });
         imageButtonContainer.appendChild(imgButton);
     }
     function navToImage(idx) {
@@ -96,7 +100,7 @@ function imageCarousel() {
     }
     return {
         getElement: getElement,
-        addImage: addImage
+        addImage: addImage,
     };
 }
 exports.imageCarousel = imageCarousel;
